@@ -26,11 +26,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-DEFAULT_TO_EMAIL = 'felipennunes@hotmail.com'
+DEFAULT_TO_EMAIL = 'email@hotmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'lipinhornunes55@gmail.com'
-EMAIL_HOST_PASSWORD = 'a1l2l3y4n5e6'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True    # Necessário para emails do tipo Gmail
 EMAIL_SUBJECT_PREFIX = "Linguagem Ambiental - "
 
