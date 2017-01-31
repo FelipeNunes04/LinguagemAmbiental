@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="text-center">
+        
+             <h2 class="section-heading">Contato</h2>
+            <p>
+                Dúvidas ou sugestões? Envie-nos uma mensagem. 
+            </p>
+        <div class="text-left">
+            <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        {{ field }}
+                        {% for error in field.errors %}
+                            <span class="help-inline text-Warning">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary" >Enviar</button>
+            </form>    
+        </div>
+        
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	{% for post in object_list %}
+		<div class="post-preview">
+            <a href="{% url 'detalhe-post' post.pk %}">
+                <h2 class="post-title">
+                    {{post.titulo}}
+                </h2>
+            </a>
+            <p class="post-meta">{{post.criado}}</p>
+            <a href="{% url 'detalhe-post' post.pk %}">
+         		<img src="{{ post.imagem.url }}" width="650px" height="350">
+         	</a>
+            <p class="post-subtitle">
+                {{post.texto|slice:":180"}}...
+            </p>
+            <p class="post-meta">Postado em {{post.categoria.nome}}</p>
+        </div>
+	{% endfor %}
+
+{% endblock %}
